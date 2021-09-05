@@ -63,6 +63,7 @@ void setup() {
     Serial.print(".");
     delay(500);
   }
+  command-> get();
 
   // we are connected
   Serial.println(io.statusText());
@@ -165,7 +166,7 @@ void handleMessage(AdafruitIO_Data *data) {
 void Pulsador(){
   digitalWrite(MOTORC,LOW);
   delay(2000);
-  digitalWrite(MOTORC,HIGH_                                                                                                                          );
+  digitalWrite(MOTORC,HIGH);
   Firebase.setInt(firebaseData, DISP + "Comando",3);
 }
 
