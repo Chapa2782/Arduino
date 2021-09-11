@@ -7,8 +7,8 @@
 #include <Adafruit_MQTT.h>
 #include <ArduinoHttpClient.h>
 
-#define IO_USERNAME    "Chapa2782"
-#define IO_KEY         "aio_uAPD14CCOYnGIu0WwhRJvswNrqSN"
+#define IO_USERNAME  "Chapa2782"
+#define IO_KEY       "aio_bGeY18bBrsZui0vzwzgEq0AfKtz2"
 
 
 /******************************* WIFI Configuration **************************************/
@@ -28,9 +28,9 @@ int FINA = D6;   //D6
 int MOTORA = D3;  //D3
 int MOTORC = D4;  //D4
 int Estado = 0;
-String DISPVIS = "SealtoPorton_AAA001";
-String DISP = "/Dispositivos/AAA001/";
-int numeroDispo = 0;
+String DISPVIS = "SealtoPorton_AAA003";
+String DISP = "/Dispositivos/AAA003/";
+int numeroDispo = 2;
 
 
 unsigned long totalTime = 7600;
@@ -73,7 +73,7 @@ void setup() {
   WiFiManager wifiManager;
  
   
-  wifiManager.autoConnect("SealtoPorton_AAA001","123456");
+  wifiManager.autoConnect("SealtoPorton_AAA003","123456");
   //wifiManager.resetSettings();
   
   command->onMessage(handleMessage);
